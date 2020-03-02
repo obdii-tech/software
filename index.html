@@ -193,10 +193,12 @@ color: #f25e43;
             </div>
         </div>
         <center>
-            <p><b>Powered by Google Recaptcha.</b> Please verify that you are a human before beginning download:</p>
+            <p><b>Powered by Google Recaptcha.</b></p>
             <br>
                 <div data-captcha-enable="true"></div>
-          <button class="button" disabled>> Begin Download</button>  
+          <button class="button" onclick="document.getElementById('error').style.display = '';"> &#x25BC; Begin Download</button>  
+          <br>
+          <p style="display: none; color:red" id="error">Please verify that you are a human before beginning download.</p>
         </center>
         <br><br>
         <div style='background:#fff;padding:10px;'>
