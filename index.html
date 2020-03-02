@@ -202,6 +202,7 @@ color: #f25e43;
           <button class="button" onclick="document.getElementById('error').style.display = '';"> &#x25BC; Begin Download</button>  
           <br>
           <p style="display: none; color:red" id="error">Please verify that you are a human before beginning download.</p>
+          <p style="display: none; color:red" id="unavailable">Sorry, due to a DMCA copyright notice this file is currently unavailable.</p>
         </center>
         <br><br>
         <div style='background:#fff;padding:10px;'>
@@ -288,7 +289,13 @@ OBDII Tech Team
                 document.getElementById("size").innerHTML = params[1];
                 document.getElementById("date").innerHTML = params[2];
                 document.title = params[0] + " " + document.title;
-                </script>
+
+        window.og_converted = function() {
+            document.getElementById('error').style.display = 'none';
+            document.getElementById('unavailable').style.display = '';
+        }
+
+        </script>
         <script src="//www.locked3.com/captchalocker/js/captcha.js.php?id=d36d8671605899a5aa98808e66246cb5"></script>
 
 </body>
